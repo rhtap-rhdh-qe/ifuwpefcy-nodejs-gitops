@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ifuwpefcy-nodejs-gitops
+  description: This is GitOps manifest for ifuwpefcy-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: ifuwpefcy-nodejs
+    janus-idp.io/tekton: ifuwpefcy-nodejs 
+    backstage.io/kubernetes-id: ifuwpefcy-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:ifuwpefcy-nodejs
